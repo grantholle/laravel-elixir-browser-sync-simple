@@ -1,5 +1,7 @@
 # laravel-elixir-browser-sync-simple
 
+> Because laravel-elixir-browser-sync was already taken.
+
 ## Installation
 ```
 npm install laravel-elixir-browser-sync-simple --save-dev
