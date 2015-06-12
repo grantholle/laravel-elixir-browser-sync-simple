@@ -1,0 +1,23 @@
+{
+  "name": "laravel-elixir-browser-sync-simple",
+  "version": "1.0.0",
+  "description": "A pure integration of Browsersync into Laravel Elixir.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Laravel",
+    "Laravel",
+    "Elixir",
+    "Browsersync",
+    "Browser",
+    "Sync"
+  ],
+  "author": "Grant Holle <hollegrant@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.7.10",
+    "underscore": "^1.8.3"
+  }
+}
