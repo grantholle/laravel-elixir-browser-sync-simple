@@ -13,7 +13,7 @@ This is a simple implementation of [Browsersync](http://www.browsersync.io/) usi
 
 Slap this in `gulpfile.js`, along with your other Elixir necessities:
 
-```
+```JavaScript
 var elixir = require('laravel-elixir');
 
 require('laravel-elixir-browser-sync-simple');
