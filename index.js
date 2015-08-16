@@ -3,31 +3,27 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     _ = require('underscore'),
-    elixir = require('laravel-elixir'),
-    config = elixir.config,
+    Elixir = require('laravel-elixir'),
+    config = Elixir.config,
     path = require('path');
 
-elixir.extend('browserSync', function (bsConfig) {
+Elixir.extend('browserSync', function (bsConfig) {
 
   bsConfig = _.extend({
     proxy: 'homestead.app',
     reloadOnRestart : true,
     notify: false,
     files: [
-      path.join(config.srcDir, '**/*.php'),
-      path.join(config.cssOutput, '**/*.css'),
-      path.join(config.jsOutput, '**/*.js'),
+      path.join(config.appPath, '**/*.php'),
+      path.join(config.publicPath, config.css.outputFolder, '**/*.css'),
+      path.join(config.publicPath, config.js.outputFolder, '**/*.js'),
       'resources/views/**/*.*'
     ]
   }, bsConfig);
 
-  gulp.task('browser-sync', function () {
-    // Only trigger if it's not active and the watch task is running
-    if (!browserSync.active && typeof gulp.tasks.watch.done !== 'undefined')
-      browserSync.init(bsConfig);
-  });
+  browserSync.init(bsConfig);
 
-  this.registerWatcher('browser-sync');
-  return this.queueTask('browser-sync');
+  // Empty task since we've already initialized Browsersync
+  new Elixir.Task('browser-sync', function () {}).watch();
 
 });

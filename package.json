@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-browser-sync-simple",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A pure integration of Browsersync into Laravel Elixir.",
   "main": "index.js",
   "scripts": {
