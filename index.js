@@ -17,7 +17,7 @@ Elixir.extend('browserSync', function (bsConfig) {
       path.join(config.appPath, '**/*.php'),
       path.join(config.publicPath, config.css.outputFolder, '**/*.css'),
       path.join(config.publicPath, config.js.outputFolder, '**/*.js'),
-      'resources/views/**/*.*'
+      'resources/views/**/*.php'
     ]
   }, bsConfig);
 
